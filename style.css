@@ -1,0 +1,58 @@
+/* Base styles for simple static site */
+:root{
+	--bg: #f7f8fc;
+	--card: #ffffff;
+	--muted: #6b7280;
+	--accent: #2b6cb0;
+	--radius: 8px;
+	--max-width: 900px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+	margin:0;
+	font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background:var(--bg);
+	color:#0f172a;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	line-height:1.45;
+}
+
+.site{
+	max-width:var(--max-width);
+	margin:32px auto;
+	padding:24px;
+	background:var(--card);
+	border-radius:var(--radius);
+	box-shadow:0 6px 18px rgba(15,23,42,0.06);
+}
+
+header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+header h1{font-size:1.25rem;margin:0}
+
+main{padding:8px 0}
+
+.hero{padding:18px;border-radius:6px;background:linear-gradient(180deg,rgba(43,108,176,0.06),transparent);margin-bottom:16px}
+.hero p{margin:0;color:var(--muted)}
+
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
+
+img{max-width:100%;height:auto;border-radius:6px}
+
+footer{margin-top:20px;padding-top:12px;border-top:1px solid #eef2f7;color:var(--muted);font-size:0.9rem}
+
+.btn{display:inline-block;padding:8px 12px;border-radius:6px;background:var(--accent);color:#fff;font-weight:600;border:0}
+.btn.secondary{background:#e6eef9;color:var(--accent)}
+
+/* Utilities */
+.muted{color:var(--muted)}
+.center{text-align:center}
+
+pre{background:#0f172a;color:#fff;padding:12px;border-radius:6px;overflow:auto}
+

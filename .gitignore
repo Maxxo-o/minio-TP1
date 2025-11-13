@@ -1,0 +1,41 @@
+# Ignore Terraform / OpenTofu local state and caches
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+
+# Plan outputs
+*.tfplan
+tfplan
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+
+# Crash logs and CLI configs
+crash.log
+.terraformrc
+tofu.tfvars
+
+# Local editor / OS files
+.vscode/
+.idea/
+*.swp
+*~
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment files
+.env
+.env.*
+
+# Optional: ignore any compiled artifacts or node_modules if present
+node_modules/
+dist/
+
